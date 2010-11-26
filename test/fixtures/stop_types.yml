@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Train station
+
+two:
+  name: Bus stop
+
+three:
+  name: Bazoinck
+
+four:
+  name: mistersquishy
