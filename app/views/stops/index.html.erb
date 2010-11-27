@@ -12,7 +12,7 @@
 <% @stops.each do |stop| %>
   <tr>
     <td><%= stop.name %></td>
-    <td><%= stop.stoptype %></td>
+    <td><%= stoptype %></td>
     <td><%= link_to 'Show', stop %></td>
     <td><%= link_to 'Edit', edit_stop_path(stop) %></td>
     <td><%= link_to 'Destroy', stop, :confirm => 'Are you sure?', :method => :delete %></td>

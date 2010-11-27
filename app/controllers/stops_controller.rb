@@ -14,7 +14,7 @@ class StopsController < ApplicationController
   # GET /stops/1.xml
   def show
     @stop = Stop.find(params[:id])
-    puts @stop.stoptype
+    #puts @stop.stoptype
     @stoptype = StopType.find(@stop.stoptype_id)
 
     respond_to do |format|
