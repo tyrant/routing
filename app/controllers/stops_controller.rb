@@ -4,6 +4,7 @@ class StopsController < ApplicationController
   def index
     @stops = Stop.all
 
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @stops }
@@ -14,7 +15,7 @@ class StopsController < ApplicationController
   # GET /stops/1.xml
   def show
     @stop = Stop.find(params[:id])
-    #puts @stop.stoptype
+    
     @stoptype = StopType.find(@stop.stoptype_id)
 
     respond_to do |format|

@@ -1,3 +1,4 @@
 class Stop < ActiveRecord::Base
-  has_one :stoptype
+  belongs_to :stoptype, :foreign_key => 'stoptype_id'
+  has_many :jumps
 end

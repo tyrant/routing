@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101121031059) do
+ActiveRecord::Schema.define(:version => 20101205045625) do
+
+  create_table "jumps", :force => true do |t|
+    t.string   "name"
+    t.integer  "length"
+    t.integer  "stop_id"
+    t.integer  "stop_id_2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.time     "starttime"
+    t.integer  "day"
+  end
 
   create_table "stop_types", :force => true do |t|
     t.string   "name"

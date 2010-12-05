@@ -3,21 +3,18 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Stoptype</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
-<% @stops.each do |stop| %>
-  <tr>
-    <td><%= stop.name %></td>
-    <td><%= stoptype %></td>
-    <td><%= link_to 'Show', stop %></td>
-    <td><%= link_to 'Edit', edit_stop_path(stop) %></td>
-    <td><%= link_to 'Destroy', stop, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% @stops.each do |stop| %>
+    <tr>
+      <td><%= stop.name %></td>
+      <td><%= link_to 'Show', stop %></td>
+      <td><%= link_to 'Edit', edit_stop_path(stop) %></td>
+      <td><%= link_to 'Destroy', stop, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
 </table>
 
 <br />

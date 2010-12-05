@@ -2,6 +2,7 @@ Routing::Application.routes.draw do
 
   resources :stops
   resources :stop_types
+  resources :jumps
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
