@@ -1,0 +1,42 @@
+<%= form_for(@jump) do |f| %>
+  <% if @jump.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jump.errors.count, "error") %> prohibited this jump from being saved:</h2>
+
+      <ul>
+        <% @jump.errors.full_messages.each do |msg| %>
+          <li><%= msg %></td>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :day %>
+    <%= f.text_field :day %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :starttime %>
+    <%= f.time_select :starttime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :length %>
+    <%= f.text_field :length %>
+  </div>
+
+  <div class="field">
+    <%= f.label :origin %>
+    <%= f.select(:stop_id, Stop.order('name').map { |s| [s.name, s.id] }) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :destination %>
+    <%= f.select(:stop_id_2, Stop.order('name').map { |s| [s.name, s.id] }) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

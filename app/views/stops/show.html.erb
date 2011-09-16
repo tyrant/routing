@@ -7,8 +7,8 @@
 
 <p>
   <b>Stoptype:</b>
-  <%= @stoptype.name %>
+  <%= @stop.stoptype.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_stop_path(@stop) %> | <%= link_to 'Back', stops_path %>
+<%= link_to 'Edit', edit_stop_path(@stop) %> | <%= link_to 'Back', stops_path %> | <%= link_to 'Another?', new_stop_path %>

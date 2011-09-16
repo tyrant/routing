@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></tr>
+
+<table>
+
+<tr>
+  <td><strong>Day</strong></td>
+  <td><%= @jump.day %></td>
+</tr>
+
+<tr>
+  <td><strong>Starting time</strong></td>
+  <td><%= @jump.starttime.hour %>:<%= @jump.starttime.min %></td>
+</tr>
+
+<tr>
+  <td><strong>Jump length (minutes)</strong></td>
+  <td><%= @jump.length %></td>
+</tr>
+
+<tr>
+  <td><strong>Origin</strong></td>
+  <td><%= @jump.origin.name %></td>
+</tr>
+
+<tr>
+  <td><strong>Destination</strong></td>
+  <td><%= @jump.destination.name %></td>
+</tr>
+</table>
+
+<%= link_to 'Edit', edit_jump_path(@jump) %> | <%= link_to 'Back', jumps_path %> | <%= link_to 'Another?', new_jump_path %>

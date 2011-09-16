@@ -1,6 +1,6 @@
 class StopType < ActiveRecord::Base
   has_many :stops
 
-  validates :name, :presence => true
+  validates_presence_of :name
   
 end

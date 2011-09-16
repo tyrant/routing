@@ -1,0 +1,30 @@
+<h1>All Jumps</h1>
+
+<table>
+  <tr>
+    <td>Day</td>
+    <td>Start time</td>
+    <td>Length</td>
+    <td>Origin</td>
+    <td>Destination</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <% @jumps.each do |jump| %>
+    <tr>
+      <td><%= jump.day %></td>
+      <td><%= jump.starttime.hour %>:<%= jump.starttime.min %></td>
+      <td><%= jump.length %></td>
+      <td><%= link_to jump.origin.name, jump.origin %></td>
+      <td><%= link_to jump.destination.name, jump.destination %></td>
+      <td><%= link_to 'Show', jump %></td>
+      <td><%= link_to 'Edit', edit_jump_path(jump) %></td>
+      <td><%= link_to 'Destroy', jump, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Jump', new_jump_path %>
