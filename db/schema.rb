@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110915074733) do
+ActiveRecord::Schema.define(:version => 20111001023016) do
 
   create_table "jumps", :force => true do |t|
     t.integer  "length"
@@ -24,6 +24,29 @@ ActiveRecord::Schema.define(:version => 20110915074733) do
     t.integer  "endday"
     t.boolean  "halt_at_start"
     t.boolean  "halt_at_end"
+  end
+
+  create_table "paths", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "price"
+    t.integer  "start_id"
+    t.integer  "finish_id"
+  end
+
+  create_table "paths_jumps", :force => true do |t|
+    t.integer "paths_id"
+    t.integer "jumps_id"
+  end
+
+  create_table "paths_stops", :force => true do |t|
+    t.integer "paths_id"
+    t.integer "stops_id"
+  end
+
+  create_table "routes", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "stop_types", :force => true do |t|
